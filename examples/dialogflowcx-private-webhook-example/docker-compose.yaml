@@ -47,8 +47,8 @@ services:
       - "traefik.enable=true"
       - "treafik.docker.network=net"
       - "traefik.http.services.web.loadbalancer.server.port=8081"
-      - "traefik.http.routers.web.rule=Host(`us-central1-vpc-sc-live-demo-nicholascain.cloudfunctions.net/custom-telco-webhook`)"
-      - "traefik.http.routers.websecure.rule=Host(`us-central1-vpc-sc-live-demo-nicholascain.cloudfunctions.net/custom-telco-webhook`)"
+      - "traefik.http.routers.web.rule=Host(`webhook.internal`)"
+      - "traefik.http.routers.websecure.rule=Host(`webhook.internal`)"
       - "traefik.http.routers.websecure.tls=true"
 
 networks:
